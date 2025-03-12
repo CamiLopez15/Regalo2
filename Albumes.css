@@ -124,6 +124,9 @@ img {
   align-items: center;
 }
 
+h2 {
+  font-size: 50px;
+}
 
 h1 {
   font-size: 50px;
@@ -135,13 +138,7 @@ h1 {
   font-size: 25px;
 }
 
-.page.front.title.external h1 {
-  font-size: 120px;
-  padding: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .audio-player {
   display: flex;
