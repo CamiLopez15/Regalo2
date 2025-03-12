@@ -1,4 +1,3 @@
-
 body{
   background: linear-gradient(to bottom, rgb(246, 255, 204) 0%, rgb(255, 195, 223) 100%);
 }
@@ -14,8 +13,8 @@ body{
 
 .flipbook {
   margin: 3em auto;
-  width: 900px;
-  height: 580px;
+  width: 1200px; /* Aumenta el ancho del libro */
+  height: 800px; /* Aumenta la altura del libro */
   position: relative;
   transform-style: preserve-3d;
   perspective: 1500px;
@@ -27,8 +26,8 @@ body{
   height: 100%;
   width: 50%;
   background-image: url("TexturaPa.jpg"); /* Reemplaza con la ruta de tu imagen */
-  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-  background-position: center; /* Centra la imagen */
+  background-size: cover;
+  background-position: center;
   left: 50%;
   transition: transform 1s ease-in-out;
   transform: rotate3d(0, 1, 0, 0deg);
@@ -112,36 +111,36 @@ body{
 }
 .page.front {
   display: flex;
-  flex-direction: column; /* Alinea los elementos verticalmente */
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
-  height: 100vh; /* Ocupa toda la pantalla */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 img {
-  height: 400px;
+  height: 500px; /* Aumenta el tamaño de las imágenes */
   width: 400px;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
   font-size: 50px;
 }
 .page.back h2 {
-  font-size: 40px;
+  font-size: 50px;
 }
 .page.back p {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .page.front.title.external h1 {
-  font-size: 100px;
-  padding: 60px;
+  font-size: 120px;
+  padding: 80px;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  justify-content: center;
+  align-items: center;
 }
 
 .audio-player {
@@ -149,134 +148,76 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 50px; /* Bordes redondeados */
- 
-  width: 350px; /* Ancho del contenedor */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar */
-  margin: 20px auto; /* Centrando el contenedor */
+  border-radius: 50px;
+  width: 400px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
 }
-
-.audio-controls {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.audio-control {
-  width: 100%;
-  outline: none;
-  border-radius: 10px;
-}
-
-
-
-
-audio::-webkit-media-controls-panel {
-  background-color: #444; /* Color de fondo de los controles en navegadores basados en Webkit */
-}
-
-audio::-webkit-media-controls-play-button,
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display,
-audio::-webkit-media-controls-timeline,
-audio::-webkit-media-controls-mute-button,
-audio::-webkit-media-controls-volume-slider {
-  filter: invert(1); /* Cambiar el color de los controles a claro */
-}
-
 
 /* Estilos para pantallas de 1024px o menos */
 @media (max-width: 1024px) {
   .flipbook {
-    width: 750px; /* Reduce el ancho del flipbook */
-    height: 520px; /* Reduce la altura del flipbook */
-  }
-
-  .flipbook .leaf {
-    width: 50%; /* Mantén la mitad de la pantalla, pero ajusta a la nueva anchura */
-  }
-
-  .page.front,
-  .page.back {
-    padding: 0.5em; /* Reduce el padding para pantallas más pequeñas */
+    width: 900px;
+    height: 580px;
   }
 
   img {
-    height: 300px; /* Reduce el tamaño de las imágenes */
-    width: 300px; /* Reduce el ancho de las imágenes */
+    height: 350px;
+    width: 280px;
   }
 
   h1 {
-    font-size: 40px; /* Ajusta el tamaño de las cabeceras principales */
+    font-size: 45px;
   }
 
   .page.back h2 {
-    font-size: 23px; /* Reduce el tamaño del texto en las páginas traseras */
+    font-size: 30px;
   }
 
   .page.back p {
-    font-size: 18px; /* Ajusta el tamaño del párrafo */
+    font-size: 20px;
   }
 
   .page.front.title.external h1 {
-    font-size: 80px; /* Reduce el tamaño del título de la página externa */
-    padding: 40px; /* Ajusta el padding */
+    font-size: 90px;
+    padding: 50px;
   }
 
   .audio-player {
-    max-width: 500px; /* Reduce el ancho máximo del reproductor de audio */
+    max-width: 350px;
   }
 }
 
 /* Estilos para pantallas de 780px o menos */
 @media (max-width: 780px) {
   .flipbook {
-    width: 620px; /* Reduce aún más el tamaño del flipbook */
-    height: 435px; /* Ajusta la altura del flipbook */
-  }
-
-  .flipbook .leaf {
-    width: 50%; /* Mantén el ancho relativo a la mitad del flipbook */
-  }
-
-  .page.front,
-  .page.back {
-    padding: 0.25em; /* Reduce aún más el padding */
+    width: 750px;
+    height: 500px;
   }
 
   img {
-    height: 200px; /* Reduce el tamaño de las imágenes para pantallas pequeñas */
-    width: 200px;
+    height: 300px;
+    width: 250px;
   }
 
   h1 {
-    font-size: 25px; /* Ajusta el tamaño del título principal */
+    font-size: 35px;
   }
 
   .page.back h2 {
-    font-size: 25px; /* Reduce el tamaño del subtítulo */
+    font-size: 25px;
   }
 
   .page.back p {
-    font-size: 14px; /* Ajusta el tamaño del texto del párrafo */
+    font-size: 18px;
   }
 
   .page.front.title.external h1 {
-    font-size: 60px; /* Ajusta el tamaño del título de la página externa */
-    padding: 30px; /* Ajusta el padding para pantallas pequeñas */
+    font-size: 70px;
+    padding: 40px;
   }
 
   .audio-player {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 50px; /* Bordes redondeados */
-   
-    width: 250px; /* Ancho del contenedor */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar */
-    margin: 20px auto; /* Centrando el contenedor */
+    width: 300px;
   }
 }
